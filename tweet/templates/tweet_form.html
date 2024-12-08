@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block title %}Index{% endblock %}
+{% block content %}
+    <h1 class="text-center mt-4">This is working</h1>
+    <h2>
+        {% if form.instance.create %} 
+        Edit Tweet 
+        {% else %} 
+        Create Tweet 
+        {% endif %}
+        <form method="post" enctype="multipart/form-data" class="form">
+            {{ form.as_p }}
+            <button class="btn btn-warning" type="submit">Submit</button>
+        </form>
+    </h2>
+
+{% endblock %}
